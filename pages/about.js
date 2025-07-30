@@ -5,7 +5,7 @@ import React from 'react'
 
 const about = () => {
   return (
-    <div>
+    <div className="pb-32 md:pb-40">
       <Navbar/>
       <About/>
       <FooterSection/>

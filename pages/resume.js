@@ -6,7 +6,7 @@ import React from 'react'
 
 const resume = () => {
   return (
-    <div>
+    <div className="pb-32 md:pb-40">
       <Navbar/>
       <Resume/>
       <FooterSection/>

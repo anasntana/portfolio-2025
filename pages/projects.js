@@ -5,14 +5,12 @@ import React from 'react'
 
 const projects = () => {
   return (
-    <div>
+    <div className="pb-32 md:pb-40">
       <Navbar/>
       <Projects/>
       <FooterSection/>
     </div>
   )
 }
-
-
 
 export default projects
