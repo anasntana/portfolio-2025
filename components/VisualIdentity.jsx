@@ -83,24 +83,24 @@ const VisualIdentity = () => {
     ));
 
   return (
-    <div className="items-center flex flex-col">
-      <div className="h-96 max-w-96 flex flex-col justify-center items-center text-center">
-        <h1 className="text-4xl">Visual Identity</h1>
-        <p className="">I love the whole process of giving brands their own unique style.</p>
+    <div className="items-center flex flex-col px-4 md:px-0">
+      <div className="h-48 md:h-96 max-w-96 flex flex-col justify-center items-center text-center">
+        <h1 className="text-2xl md:text-4xl">Visual Identity</h1>
+        <p className="text-sm md:text-base">I love the whole process of giving brands their own unique style.</p>
       </div>
 
-      <div className="flex w-screen justify-between">
-        <div className="ml-20">
+      <div className="flex w-full justify-between px-4 md:px-20">
+        <div className="md:ml-20">
           <a
             href="/projects/ui-design"
-            className="flex justify-start rounded bg-right-bottom bg-gradient-to-r from-gray-900 to-gray-900 bg-[length:0%_1px] bg-no-repeat hover:bg-[length:100%_1px] transition-all duration-500 ease-out"
+            className="flex justify-start rounded bg-right-bottom bg-gradient-to-r from-gray-900 to-gray-900 bg-[length:0%_1px] bg-no-repeat hover:bg-[length:100%_1px] transition-all duration-500 ease-out text-sm md:text-base"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="w-6 h-6 mr-2 text-rose-500 transform rotate-180"
+              className="w-4 h-4 md:w-6 md:h-6 mr-2 text-rose-500 transform rotate-180"
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
@@ -108,10 +108,10 @@ const VisualIdentity = () => {
           </a>
         </div>
 
-        <div className="mr-20">
+        <div className="md:mr-20">
           <a
             href="/projects/renders-3d"
-            className="flex justify-end rounded bg-left-bottom bg-gradient-to-r from-gray-900 to-gray-900 bg-[length:0%_1px] bg-no-repeat hover:bg-[length:100%_1px] transition-all duration-500 ease-out"
+            className="flex justify-end rounded bg-left-bottom bg-gradient-to-r from-gray-900 to-gray-900 bg-[length:0%_1px] bg-no-repeat hover:bg-[length:100%_1px] transition-all duration-500 ease-out text-sm md:text-base"
           >
             3D
             <svg
@@ -119,7 +119,7 @@ const VisualIdentity = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="w-6 h-6 ml-2 text-rose-500"
+              className="w-4 h-4 md:w-6 md:h-6 ml-2 text-rose-500"
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
@@ -128,8 +128,8 @@ const VisualIdentity = () => {
       </div>
 
       {/* Aleks Collection */}
-      <h2 className="text-2xl font-regular mt-8 mb-4">Aleks Rynd</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-20 mb-8 sm:mb-16 md:mb-24">
+      <h2 className="text-xl md:text-2xl font-regular mt-8 mb-4">Aleks Rynd</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-20 mb-8 sm:mb-16 md:mb-24">
         <div className="grid gap-4">{renderImageGrid(images.slice(0, 3), 0)}</div>
         <div className="grid gap-4">{renderImageGrid(images.slice(3, 6), 3)}</div>
         <div className="grid gap-4">{renderImageGrid(images.slice(6, 9), 6)}</div>
@@ -138,15 +138,15 @@ const VisualIdentity = () => {
       </div>
 
       {/* Anasantana Collection */}
-      <h2 className="text-2xl font-regular mt-8 mb-4">Anasantana</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-20 mb-8 sm:mb-16 md:mb-24">
+      <h2 className="text-xl md:text-2xl font-regular mt-8 mb-4">Anasantana</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-20 mb-8 sm:mb-16 md:mb-24">
         <div className="grid gap-4">{renderImageGrid(images.slice(13, 16), 13)}</div>
         <div className="grid gap-4">{renderImageGrid(images.slice(16, 19), 16)}</div>
       </div>
 
       {/* Snack Collection */}
-      <h2 className="text-2xl font-regular mt-8 mb-4">Snack Brasuka</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-20 mb-8 sm:mb-16 md:mb-24">
+      <h2 className="text-xl md:text-2xl font-regular mt-8 mb-4">Snack Brasuka</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-20 mb-8 sm:mb-16 md:mb-24">
         <div className="grid gap-4">{renderImageGrid(images.slice(19, 22), 19)}</div>
         <div className="grid gap-4">{renderImageGrid(images.slice(22, 25), 22)}</div>
         <div className="grid gap-4">{renderImageGrid(images.slice(25, 26), 25)}</div>
@@ -158,7 +158,7 @@ const VisualIdentity = () => {
           onClick={closeOverlay}
         >
           <button
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl font-bold select-none"
+            className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl md:text-4xl font-bold select-none"
             onClick={prevImage}
             aria-label="Previous Image"
           >
@@ -167,11 +167,11 @@ const VisualIdentity = () => {
           <img
             src={images[currentIndex]}
             alt={`Visual Identity ${currentIndex + 1}`}
-            className="max-h-[90vh] max-w-[90vw] rounded shadow-lg"
+            className="max-h-[80vh] md:max-h-[90vh] max-w-[90vw] rounded shadow-lg"
             onClick={(e) => e.stopPropagation()}
           />
           <button
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl font-bold select-none"
+            className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl md:text-4xl font-bold select-none"
             onClick={nextImage}
             aria-label="Next Image"
           >

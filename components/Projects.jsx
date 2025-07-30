@@ -18,16 +18,16 @@ const Projects = () => {
 
   return (
     <div
-      className="h-screen flex justify-center items-center gap-8 text-4xl relative"
+      className="min-h-screen flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-2xl md:text-4xl relative px-4 md:px-0"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setHoverImg(null)}
     >
-      {/* Hover image behind the titles */}
+      {/* Hover image behind the titles - hidden on mobile */}
       {hoverImg && (
         <img
           src={hoverImg}
           alt="Preview"
-          className="pointer-events-none absolute max-w-96 max-h-96 opacity-80 transition-opacity duration-200 rounded"
+          className="pointer-events-none absolute max-w-48 md:max-w-96 max-h-48 md:max-h-96 opacity-80 transition-opacity duration-200 rounded hidden md:block"
           style={{
             top: position.y,
             left: position.x,
@@ -38,17 +38,19 @@ const Projects = () => {
       )}
 
       {/* Links on top of image */}
-      {projects.map(({ href, label, imgSrc }) => (
-        <a
-          key={href}
-          href={href}
-          className="relative px-4 py-2 z-10 font-serif"
-          onMouseEnter={() => setHoverImg(imgSrc)}
-          onMouseLeave={() => setHoverImg(null)}
-        >
-          {label}
-        </a>
-      ))}
+      <div className="flex flex-col md:flex-row gap-4 md:gap-8 z-10">
+        {projects.map(({ href, label, imgSrc }) => (
+          <a
+            key={href}
+            href={href}
+            className="relative px-4 py-2 font-serif text-center md:text-left hover:opacity-80 transition-opacity duration-200"
+            onMouseEnter={() => setHoverImg(imgSrc)}
+            onMouseLeave={() => setHoverImg(null)}
+          >
+            {label}
+          </a>
+        ))}
+      </div>
     </div>
   );
 };
